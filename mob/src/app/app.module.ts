@@ -5,6 +5,8 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+
 
 import { AppComponent } from './app.component';
 import { appRoutingModule } from './app-routing.module';
@@ -24,7 +26,6 @@ import { AlertComponent } from './_components';
     HomeComponent,
     RegisterComponent,
     AlertComponent
-
   ],
   entryComponents: [],
   imports: [
@@ -37,6 +38,7 @@ import { AlertComponent } from './_components';
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

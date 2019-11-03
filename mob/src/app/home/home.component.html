@@ -1,0 +1,19 @@
+﻿<ion-app>
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Dashboard</ion-title>
+            <ion-buttons (click)="logout()" slot="end">
+                Logout
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding">
+        <ion-avatar>
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+        <h1>{{currentUser.firstName}} {{currentUser.lastName}}</h1>
+
+    </ion-content>
+</ion-app>

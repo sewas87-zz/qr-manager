@@ -7,7 +7,6 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
-
 import { AppComponent } from './app.component';
 import { appRoutingModule } from './app-routing.module';
 import { LoginComponent } from "./login";
@@ -17,7 +16,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {ErrorInterceptor, JwtInterceptor} from "./_helpers";
 import { AlertComponent } from './_components';
-
+import { ProfileComponent } from "./profile";
+import {EmployeesListComponent} from "./employees-list";
 
 @NgModule({
   declarations: [
@@ -25,6 +25,8 @@ import { AlertComponent } from './_components';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
+    ProfileComponent,
+    EmployeesListComponent,
     AlertComponent
   ],
   entryComponents: [],
